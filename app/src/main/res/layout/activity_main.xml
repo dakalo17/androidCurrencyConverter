@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <View
+        android:id="@+id/vDivider"
+        android:visibility="invisible"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputCurrencyContainer"
+        android:layout_width="match_parent"
+        android:layout_toStartOf="@+id/vDivider"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="200dp"
+
+        app:boxCornerRadiusTopEnd="10dp"
+
+        app:startIconDrawable="@drawable/generic_cash"
+        app:boxCornerRadiusTopStart="10dp"
+
+        android:hint="@string/enter">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtInputCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputCurrencySelectContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_toStartOf="@+id/vDivider"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtInputCurrencyContainer"
+
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:hint="@string/choose_currency">
+
+        <AutoCompleteTextView
+            android:id="@+id/txtInputCurrencySelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtOutputCurrencyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/vDivider"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="200dp"
+        app:boxCornerRadiusTopEnd="10dp"
+
+        app:boxCornerRadiusTopStart="10dp"
+        android:enabled="false"
+        android:clickable="false"
+        android:hint="@string/output">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtOutputCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtOutputCurrencySelectContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/vDivider"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/txtOutputCurrencyContainer"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:hint="@string/choose_currency">
+
+        <AutoCompleteTextView
+            android:id="@+id/txtOutputCurrencySelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+
+        android:id="@+id/btnConvert"
+        android:text="@string/convert" />
+
+</RelativeLayout>

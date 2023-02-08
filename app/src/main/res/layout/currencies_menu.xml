@@ -8,6 +8,7 @@
     android:ellipsize="end"
     android:maxLines="1"
     android:textStyle="normal"
+    android:textColor="@color/white"
     android:textSize="20sp"
     android:textAppearance="?attr/textAppearanceListItemSecondary"
     />
